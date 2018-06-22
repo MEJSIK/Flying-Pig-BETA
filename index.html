@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/x-icon" href="http://sizeer.com/wp-content/themes/sizeer/images/favicon.png" />
+	<title>Sizeer Game</title>
+
+<style>
+@font-face {
+	font-family: "Luckiest Guy";
+	font-style: normal;
+	font-weight: 400;
+	src: url("assets/fonts/font.ttf");
+}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		background: #000222;
+	}
+
+
+
+	
+</style>
+
+
+</head>
+<body>
+
+<div id="main-game"></div>
+
+
+	
+<script src="assets/js/phaser-2.6.2.min.js"></script>
+
+
+	
+
+
+	<script src="assets/js/Boot.js"></script>
+	<script src="assets/js/Preloader.js"></script>
+	<script src="assets/js/MainMenu.js"></script>
+	<script src="assets/js/timer.js"></script>
+	<script src="assets/js/Authors.js"></script>
+<script src="assets/js/stars.js"></script>
+	<script src="assets/js/Game.js"></script>
+	<script>
+		(function() {
+			// initialize the framework
+ var gameConfig = {width: 960, height:540, parent: "main-game", title: "Fly Kicks", fps: 30, renderer: Phaser.AUTO, resolution:
+1,physics:
+		{ default: "arcade", arcade: { gravity: { y: 200 } } } };
+		
+		
+			var game = new Phaser.Game(gameConfig);
+		
+			
+		  
+			
+		 this.game = game;
+			// add game states
+			game.state.add('Boot', Sizeer.Boot);
+			game.state.add('Preloader', Sizeer.Preloader);
+			game.state.add('MainMenu', Sizeer.MainMenu);
+			game.state.add('Game', Sizeer.Game);
+			game.state.add('Authors', Sizeer.Authors);
+		
+			
+		
+			// start the Boot state
+			game.state.start('Boot');
+			
+		})();
+		
+		</script>
+
+</body>
+</html>
