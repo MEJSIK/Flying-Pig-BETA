@@ -2,6 +2,7 @@ var Sizeer = {
     
 };
 
+Sizeer.mutedYN = 0;
 Sizeer.Boot = function (game) {
 
 };
@@ -12,11 +13,11 @@ Sizeer.Boot.prototype = {
     /* PRELOADER */
     this.load.image(
       "preloaderBar",
-      "assets/img/loading-bar.png"
+      "../img/loading-bar.png"
     );
     this.load.image(
       "loadingTxt",
-      "assets/img/loadingTxt.png"
+      "../img/loadingTxt.png"
     );
 
   },
