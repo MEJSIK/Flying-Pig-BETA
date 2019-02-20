@@ -1,7 +1,7 @@
 var timerValues = {
     timerEvent: function () {
         //clockCounterEvent = Sizeer.Game.preload.time.events.loop(1000, this.updateCounter, this);
-        console.log("rgrgrg");
+        
     }
 };
 
@@ -16,69 +16,8 @@ var timerValues = {
 //game.physics.arcade.overlap(pig, stars, collisionHandler, null, this);
 var machinesConf = {
    
-        machineCreate: function () {
-           
-        switch (game.rnd.integerInRange(1, 1)) {
-            case 1:
-                this.machine = this.machines.create(Sizeer.GAME_WIDTH * len * 0.5, 250, "mach2", 0);
-                this.machine.body.setSize(230, 300, 90, 150);
-                this.machine.scale.setTo(0.7);
-                this.machine.animations.add("move", null, 7, true, true);
-                this.machine.animations.play("move", true);
-                len++;
-                break;
-            case 2:
-                var machine = this.machines.create(Sizeer.GAME_WIDTH * len * 0.5, 320, "mach3", 0);
-                this.machine.body.setSize(400, 300, 80, 70);
-                this.machine.scale.setTo(0.7);
-                this.machine.animations.add("move", null, 7, true, true);
-                this.machine.animations.play("move", true);
-                len++;
-                break;
-            case 3:
-            this.machine = this.machines.create(Sizeer.GAME_WIDTH * len * 0.5, 250, "mach4", 0);
-                this.machine.body.setSize(300, 400, 60, 50);
-                this.machine.scale.setTo(0.7);
-                this.machine.animations.add("move", null, 7, true, true);
-                this.machine.animations.play("move", true);
-                this.len++;
-                break;
-            case 4:
-                this.machine = this.machines.create(Sizeer.GAME_WIDTH * len * 0.5, 300, "mach5", 0);
-                this.machine.body.setSize(180, 350, 40, 45);
-                this.machine.scale.setTo(0.7);
-                this.machine.animations.add("move", null, 7, true, true);
-                this.machine.animations.play("move", true);
-                len++;
-                break;
-            case 5:
-            this.machine = this.machines.create(Sizeer.GAME_WIDTH * len * 0.5, 350, "mach6", 0);
-            this.machine.body.setSize(100, 350, 25, 5);
-                len++;
-                break;
-            case 6:
-            this.machine = this.machines.create(Sizeer.GAME_WIDTH * len * 0.5, 100, "mach7", 0);
-            this.machine.body.setSize(40, 20, 40, 20);
-            this.machine.scale.setTo(3);
-                len++;
-                break;
-            case 7:
-            this.machine = this.machines.create(Sizeer.GAME_WIDTH * len * 0.5, 440, "mach8", 0);
-            this.machine.body.setSize(50, 50);
-            this.machine.scale.setTo(3);
-                len++;
-                break;
-            case 8:
-            this.machine = this.machines.create(Sizeer.GAME_WIDTH * len * 0.5, 300, "mach9", 0);
-            this.machine.body.setSize(100, 100, 0, 20);
-            this.machine.scale.setTo(3);
-                len++;
-                break;
-            default:
-                len++;
-                break;
-        }
-    },
+        
+    
     machineColision: function () {
 
         game.physics.arcade.overlap(pig, machines, machinesConf.machineColision(), null, this);
