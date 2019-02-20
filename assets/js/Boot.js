@@ -13,20 +13,10 @@ Sizeer.Boot.prototype = {
     /* PRELOADER */
     this.load.image(
       "preloaderBar",
-<<<<<<< HEAD
-      "../img/loading-bar.png"
+
+      "assets/img/loading-bar.png"
     );
-    this.load.image(
-      "loadingTxt",
-      "../img/loadingTxt.png"
-=======
-      "../../wp-content/themes/sizeer/landings/FlyingPig/assets/img/loading-bar.png"
-    );
-    this.load.image(
-      "loadingTxt",
-      "../../wp-content/themes/sizeer/landings/FlyingPig/assets/img/loadingTxt.png"
->>>>>>> v1.1
-    );
+    
 
   },
   create: function () {
