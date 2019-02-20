@@ -14,7 +14,7 @@ Sizeer.Boot.prototype = {
     this.load.image(
       "preloaderBar",
 
-      "../img/loading-bar.png"
+      "assets/img/loading-bar.png"
     );
     
 
