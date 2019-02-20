@@ -18,12 +18,23 @@ Sizeer.Authors.prototype ={
     this.bgYellow.anchor.setTo(0.5);
     this.bgYellow.scale.setTo(2);
 
-    this.add.text(Sizeer.GAME_WIDTH*0.5,250,"Lorem Ipsum",{
-        
-                font: "24px Luckiest Guy",
-                fill: Sizeer._fontColor
+    this.add.text(Sizeer.GAME_WIDTH*0.5,250,"Bartłomiej Walasik",{
+                font: "32px Luckiest Guy",
+                fill: 0xfff
             
     }).anchor.setTo(0.5);
+    this.add
+      .text(Sizeer.GAME_WIDTH * 0.5, 300, "Szymon Wojciechowski", {
+        font: "32px Luckiest Guy",
+        fill: 0xfff
+      })
+      .anchor.setTo(0.5);
+
+       Sizeer.pig = this.add.sprite(60, 200, "pig", -1);
+       Sizeer.pig.scale.setTo(0.5);
+        Sizeer.pig.animations.add("fly");
+
+        Sizeer.pig.animations.play("fly", 20, true);
     
 		this.title = this.add
       .sprite(200, 450, "title")
@@ -37,7 +48,7 @@ Sizeer.Authors.prototype ={
     
 
 		// add the button that will start the game
-		this._playBtn = this.add.button(Sizeer.GAME_WIDTH*0.9, 100, "button-prev", function(game){
+		this._playBtn = this.add.button(Sizeer.GAME_WIDTH*0.1, 100, "button-prev", function(game){
         	this.state.start("MainMenu"); 
         }, this, 1, 0, 2).anchor.setTo(0.5);
 		
